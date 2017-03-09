@@ -1,0 +1,19 @@
+extends layout
+ 
+block content
+    h1 更新用户资料
+    form(method='post', action='/p/users/updateUser')
+        div.form-row
+            label
+                span ID:
+                input(type='text',name='id')
+        div.form-row
+            label
+                span name:
+                input(type='text',name='name')
+        div.form-row
+            label
+                span age:
+                input(type='text',name='age')
+        div.form-row
+            input(type='submit')
