@@ -15,6 +15,7 @@
     "serve-favicon": "~2.3.2"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "mysql": "^2.13.0"
   }
 }
