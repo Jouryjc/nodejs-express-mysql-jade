@@ -1,0 +1,20 @@
+include ./layout
+
+block content
+	div.container
+		div.rows
+			div.col-lg-12.col-sm-12
+				h1 Add User
+				form.form-horizontal
+					div.form-group
+						label.col-sm-2.control-label(for="inputEmail3") Name
+						div.col-sm-10
+							input.form-control#name(placeholder="name", type="text")
+					div.form-group
+						label.col-sm-2.control-label(for="inputEmail3") Age
+						div.col-sm-10
+							input.form-control#age(placeholder="Age", type="text")
+					div.form-group
+						div.col-sm-offset-2.col-sm-10
+							button.btn.btn-default#addUser(type="submit") 提交
+	script(src="/javascripts/list.js")

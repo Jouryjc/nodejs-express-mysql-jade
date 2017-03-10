@@ -10,6 +10,11 @@ router.get('/', function(req, res, next) {
 router.get('/addUser', function(req, res, next) {
 	userDao.add(req, res, next);
 });
+router.get('/addUserMiddle', function(req, res, next) {
+	res.render('addUser',{
+		title:'添加用户页'
+	});
+});
 //查看全部用户
 router.get('/queryAll', function(req, res, next) {
 	userDao.queryAll(req, res, next);

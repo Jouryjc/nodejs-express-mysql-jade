@@ -1,0 +1,46 @@
+include ./layout
+
+block content
+	div.container
+		div.rows
+			div.col-lg-12
+				form.form-inline
+						input.form-control#searchId(type="text" , placeholder="Seach Id")
+						button.btn.btn-default#search(type="submit") 搜索
+				table.table.table-bordered.table-hover
+					tr
+						th ID
+						th name
+						th age
+						th 编辑
+					tbody#infoContainer
+						each item in result
+							tr
+								td #{item.id}
+								td #{item.name}
+								td #{item.age}
+								td
+									a.btn.btn-danger.del(data-id="#{item.id}") 删除
+									a.btn.btn-primary.edit(data-id="#{item.id}", data-age="#{item.age}", data-name="#{item.name}",data-toggle="modal") 编辑
+					tfoot
+							tr
+								td(colspan="4")
+									a.btn.btn-primary#add(href="/users/addUserMiddle") 添加
+		div.modal.fade#myModal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel")
+			div.modal-dialog(role="document")
+				div.modal-content
+					div.modal-header
+						h4.modal-title#myModalLabel EditInfo
+					div.modal-body
+						form.form-inline
+							div.form-group
+								input.form-control#id(type="hidden")
+								label(for="name") Name
+								input.form-control#name(type="text")
+							div.form-group
+									label(for="age") Age
+									input.form-control#age(type="text")
+					div.modal-footer
+						button(type="button" ,class="btn btn-default" ,data-dismiss="modal") Close
+						button#save(type="button" ,class="btn btn-default") Save
+	script(src="/javascripts/list.js")
