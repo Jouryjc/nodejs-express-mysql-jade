@@ -1,15 +1,16 @@
 # nodejs-express-jade<br>
 # npm install<br>
 安装依赖包
-# npm run start<br>
-运行项目
-# localhost:3000<br>
-在浏览器地址输入localhost:3000即可进入，现在还没有页面！后期逐渐完善<br>
-#第二版<br>
 #npm install bower -g
 安装bower<br>
 #bower install bootstrap
-安装bootstrap包<br>
+安装bootstrap<br>
+# npm start<br>
+运行项目
+# localhost:3000/users/queryAll<br>
+在浏览器地址输入localhost:3000/users/queryAll就可以运行项目主页了<br>
+
+demo比较简单，主要为了理清楚express的工作流程
 
 
-把用bootstrap调整界面，并把逻辑串联起来了。不用在地址栏上输入测试。
+
