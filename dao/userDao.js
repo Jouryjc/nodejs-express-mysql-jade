@@ -71,7 +71,6 @@ module.exports = {
 		}
 		pool.getConnection(function(err, connection) {
 			connection.query($sql.update, [param.name, param.age, param.id], function(err, result) {
-				console.log(result.affectedRows);
 				// 使用页面进行跳转提示
 				// if(result.affectedRows) {
 				// 	res.render('suc',{
@@ -100,7 +99,7 @@ module.exports = {
 	queryAll: function (req, res, next) {
 		pool.getConnection(function(err, connection) {
 			connection.query($sql.queryAll, function(err, result) {
-				// jsonWrite(res, result);
+				console.log(result);
 				res.render('list',{
 					title:'列表页',
 					result:result

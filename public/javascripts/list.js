@@ -20,13 +20,15 @@ $(document).ready(function(){
 	//删除
 	// $('.del').live("click" ,function(){
 	$('body').on("click" , '.del' , function(e){
-		let id = $(this).attr('data-id');
+		let id = $(this).attr('data-id'),
+			that = this;
 		if(confirm('确定删除该项?')){
 			$.ajax({
 				type:'get',
 				url:'./deleteUser?id='+id,
 				success:function(){
 					alert('success');
+					$(that).parent().parent().fadeOut();
 				}
 			});
 		}else{

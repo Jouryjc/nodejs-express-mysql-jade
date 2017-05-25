@@ -1,11 +1,11 @@
 var gulp = require('gulp');
 
-gulp.task('moveFile' , function(){
-	return gulp.src('bower_components/*')
-    .pipe(gulp.dest('public/libs/'));
-})
+gulp.task('moveJquery' , function(){
+	return gulp.src('node_modules/jquery/*/*')
+    .pipe(gulp.dest('public/libs/jquery'));
+});
 
-
-gulp.task('default', function() {
-  
+gulp.task('moveBootstrap' ,['moveJquery'] ,  function(){
+	return gulp.src('node_modules/bootstrap/*/*/*')
+    .pipe(gulp.dest('public/libs/bootstrap/'));
 });
